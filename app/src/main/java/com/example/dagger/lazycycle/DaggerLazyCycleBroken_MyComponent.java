@@ -31,7 +31,7 @@ public final class DaggerLazyCycleBroken_MyComponent implements MyComponent {
   }
 
   private void initialize(final Builder builder) {  
-    this.fooMembersInjector = LazyCycleBroken$Foo_MembersInjector.create(LazyCycleBroken$Baz_Factory.create());
+    this.fooMembersInjector = LazyCycleBroken$Foo_MembersInjector.create(barProvider);
     this.fooProvider = LazyCycleBroken$Foo_Factory.create(fooMembersInjector);
     this.barMembersInjector = LazyCycleBroken$Bar_MembersInjector.create(fooProvider);
     this.barProvider = LazyCycleBroken$Bar_Factory.create(barMembersInjector);
