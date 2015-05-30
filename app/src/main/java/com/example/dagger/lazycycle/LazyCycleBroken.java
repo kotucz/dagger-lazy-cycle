@@ -32,10 +32,16 @@ public class LazyCycleBroken {
 
     public static class Foo {
         @Inject
-        Bar bar;
+        Baz bar;
 
         @Inject
         public Foo() {
+        }
+    }
+
+    public static class Baz {
+        @Inject
+        public Baz() {
         }
     }
 }
